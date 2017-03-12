@@ -48,13 +48,17 @@ h4 {
   color: #fff !important; /* White */
 }
 
-.bg-grey {
+.bg-aqua {
   background-color: #eaf9f9; /* Aqua */
+}
+
+.bg-white {
+  background-color: #fff; /* White */
 }
 
 .jumbotron {
   background-color: #d8d8d8;  /* Light Grey */
-  color: #fff; /* White */
+  color: #4a5859; /* Blue Grey */
   padding: 100px 25px;
   font-family: Montserrat, sans-serif;
 }
@@ -92,19 +96,6 @@ h4 {
   height: 100%;
   margin-bottom: 10px;
 }
-
-/*.btn {
-  color: #4a5859;
-  background-color: #eaf9f9;
-  border: None;
-}
-
-.btn:hover {
-  color: #eaf9f9;
-  background-color: #4a5859;
-  border: None;
-}
-*/
 
 footer .glyphicon {
   font-size: 20px;

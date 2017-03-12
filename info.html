@@ -52,67 +52,59 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" name="#">SOFIA &amp; JACK</a>
+          <a class="navbar-brand" href="index.html" id="#">SOFIA &amp; JACK</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#setting">LOCATION</a></li>
             <li><a href="#hotels">ACCOMMODATIONS</a></li>
             <li><a href="#town">AROUND TOWN</a></li>
-            <li><a href="#setting">LOCATION</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
     <div class="jumbotron text-center">
-      <h1>PARTY</h1>
-      <p>SEPTEMBER 23RD 2017</p>
+      <h1>SOFIA &amp; JACK</h1>
+      <p>ARE GETTING MARRIED, AND HAVING A PARTY!</p>
       <form class="form-inline">
         <div class="input-group">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default">RSVP</button>
+            <a href="mailto:sofia.deguzman@gmail.com" class="btn btn-default btn-lg" role="button">CONTACT US</a>
           </div>
         </div>
       </form>
     </div>
 
-    <div class="container-fluid">
+    <a id="setting"></a>
+    <div class="container-fluid text-center">
     <div class="row">
-      <div class="col-sm-8">
-        <h2>About</h2>
-        <h4>SOFIA &amp; JACK ARE GETTING MARRIED</h4>
+      <div class="col-sm-12">
+        <h2>Location</h2>
         <p>
           At The Lloyd Neck Bath Club <br>
-          September 23rd 2017 <br>
+          September 23rd, 2017 <br>
           5pm
         </p>
-        <br>
-        <a href="mailto:sofia.deguzman@gmail.com" class="btn btn-default btn-lg" role="button">Our Email</a>
-      </div>
-        <div class="col-sm-4 thumbnail">
-          <span><img src="images/bird.jpg" alt="West Neck Beach"></span>
-        </div>
       </div>
     </div>
-
-    <div class="container-fluid bg-grey">
-      <div class="row">
-        <div class="col-sm-4">
-          <span class="glyphicon glyphicon-globe logo"></span>
-        </div>
-        <div class="col-sm-8">
-          <h2>The Night</h2>
-          <h4>Dinner and drinks will be served.</h4>
-          <h4>
-            Festive attire, please note that if the weather <br>
-            agrees, we hope to spend the night outside on <br>
-            grass lawn and beachfront.
-          </h4>
-        </div>
-      </div>
     </div>
 
-    <div class="container-fluid text-center">
+    <!-- Add Google Maps -->
+    <div id="googleMap" style="height:400px;width:100%;"></div>
+    <script>
+      function myMap() {
+      var myCenter = new google.maps.LatLng(40.9043562, -73.4834538);
+      var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      var marker = new google.maps.Marker({position:myCenter});
+      marker.setMap(map);
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+    <a id="hotels"></a>
+    <div class="container-fluid text-center bg-aqua">
       <h2>ACCOMMODATIONS</h2>
       <h4>where to stay</h4>
       <div class="row text-center">
@@ -120,8 +112,9 @@
           <div class="thumbnail">
             <a href="http://bestwesternnewyork.com/hotels/best-western-woodbury-inn">
             <img src="images/best-western.jpg" alt="Best Western"></a>
-            <p><strong>Best Western, Woodbury</strong></p>
-            <p>Group Block Available</p>
+            <p><strong>Best Western</strong></p>
+            <p>Woodbury, NY<br>
+              Group Block Available</p>
           </div>
         </div>
         <div class="col-sm-3">
@@ -129,7 +122,8 @@
             <a href="http://www.theinnatfoxhollow.com/">
             <img src="images/fox-hollow.jpg" alt="Fox Hollow Inn"></a>
             <p><strong>The Inn at Fox Hollow</strong></p>
-            <p>Group Block Available</p>
+            <p>Woodbury, NY<br>
+              Group Block Available</p>
           </div>
         </div>
         <div class="col-sm-3">
@@ -150,96 +144,73 @@
         </div>
     </div>
 
-    <div class="container-fluid text-center bg-grey">
+    <a id="town"></a>
+    <div class="container-fluid text-center bg-white">
       <h2>Around Town</h2>
       <h4>If you have free time to explore, Huntington, Cold Spring Harbor,
         Northport, and Oyster Bay are all great towns to take a walk around.
         A few other nice spots include:</h4>
       <br>
       <div class="row">
-        <div class="col-sm-3">
-          <span class="glyphicon glyphicon-off"></span>
-          <h4>Caumsett State Historic Park in Lloyd Neck</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+        <div class="col-sm-4">
+          <a href="https://parks.ny.gov/parks/23/details.aspx">
+          <span class="glyphicon glyphicon-leaf"></span></a>
+          <h4>Caumsett</h4>
+          <p>State Historic Park in Lloyd Neck</p>
         </div>
-        <div class="col-sm-3">
-          <span class="glyphicon glyphicon-heart"></span>
-          <h4>The Heckscher Museum of Art in Huntington</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+        <div class="col-sm-4">
+          <a href="http://www.heckscher.org/">
+          <span class="glyphicon glyphicon-tree-deciduous"></span></a>
+          <h4>The Heckscher</h4>
+          <p>Museum of Art in Huntington</p>
         </div>
-        <div class="col-sm-3">
-          <span class="glyphicon glyphicon-lock"></span>
-          <h4>Teddy’s Roosevelt’s Estate Sagamore Hill in Oyster Bay</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div class="col-sm-3">
-          <span class="glyphicon glyphicon-lock"></span>
-          <h4>Raynham Hall in Oyster Bay</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+        <div class="col-sm-4">
+          <a href="https://www.nps.gov/sahi/index.htm">
+          <span class="glyphicon glyphicon-home"></span></a>
+          <h4>The Summer White House</h4>
+          <p>Teddy’s Roosevelt’s Estate, Sagamore Hill in Oyster Bay</p>
         </div>
         </div>
         <br><br>
       <div class="row">
-        <div class="col-sm-3">
-          <span class="glyphicon glyphicon-leaf"></span>
+        <div class="col-sm-4">
+          <a href="http://raynhamhallmuseum.org/">
+          <span class="glyphicon glyphicon-tint"></span></a>
+          <h4>Raynham Hall</h4>
+          <p>In Oyster Bay</p>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.google.com/maps/place/Thai-USA/@40.8733132,-73.4278555,17z/data=!3m1!4b1!4m5!3m4!1s0x89e827d645be456d:0x941846c277f04ec!8m2!3d40.8733092!4d-73.4256668">
+          <span class="glyphicon glyphicon-fire"></span></a>
           <h4>Thai USA</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+          <p>Thai food in Huntington, NY</p>
         </div>
-        <div class="col-sm-3">
-          <span class="glyphicon glyphicon-certificate"></span>
+        <div class="col-sm-4">
+          <a href="https://www.google.com/maps/place/Little+Vincent's+Pizza/@40.8709791,-73.4286331,17z/data=!3m1!4b1!4m5!3m4!1s0x89e828788b3a1f53:0xf8e381888ac8ac9d!8m2!3d40.8709751!4d-73.4264444">
+          <span class="glyphicon glyphicon-certificate"></span></a>
           <h4>Little Vincent's Pizza</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div class="col-sm-3">
-          <span class="glyphicon glyphicon-wrench"></span>
-          <h4>Munday's</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div class="col-sm-3">
-          <span class="glyphicon glyphicon-wrench"></span>
-          <h4>Cassis</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+          <p>Pizza in Huntington, NY</p>
         </div>
       </div>
-    </div>
-
-    <!-- Add Google Maps -->
-    <div id="googleMap" style="height:400px;width:100%;"></div>
-    <script>
-      function myMap() {
-      var myCenter = new google.maps.LatLng(40.9043562, -73.4834538);
-      var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-      var marker = new google.maps.Marker({position:myCenter});
-      marker.setMap(map);
-    }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-
-    <div class="container-fluid bg-grey">
-      <h2 class="text-center">CONTACT</h2>
+      <br><br>
+      <div class="col-sm-4">
+        <a href="https://www.google.com/maps/place/Munday's/@40.871465,-73.4348197,15z/data=!4m5!3m4!1s0x89e828789cbbac87:0x4159271a4a39689d!8m2!3d40.871461!4d-73.426065">
+        <span class="glyphicon glyphicon-wrench"></span></a>
+        <h4>Munday's</h4>
+        <p>Diner in Huntington, NY</p>
+      </div>
+      <div class="col-sm-4">
+        <a href="http://www.bistrocassis.com/">
+        <span class="glyphicon glyphicon-grain"></span></a>
+        <h4>Cassis</h4>
+        <p>French bistro in Huntington, NY</p>
+      </div>
       <div class="row">
-        <div class="col-sm-5">
-          <p>Contact us and we'll get back to you within 24 hours.</p>
-          <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-          <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-          <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-        </div>
-        <div class="col-sm-7">
-          <div class="row">
-            <div class="col-sm-6 form-group">
-              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-            </div>
-            <div class="col-sm-6 form-group">
-              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-            </div>
-          </div>
-          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-          <div class="row">
-            <div class="col-sm-12 form-group">
-              <button class="btn btn-default pull-right" type="submit">Send</button>
-            </div>
-          </div>
+        <div class="col-sm-4">
+          <a href="http://www.pomodorolongisland.com/">
+          <span class="glyphicon glyphicon-glass"></span></a>
+          <h4>Pomodoro</h4>
+          <p>Italian restaurant in Huntington, NY</p>
         </div>
       </div>
     </div>
