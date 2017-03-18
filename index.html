@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
 
     <script>
@@ -52,11 +52,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" id="#">SOFIA &amp; JACK</a>
+          <a class="navbar-brand" href="#" id="#">HOME</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="info.html">MORE DETAILS</a></li>
+            <li><a href="#setting">LOCATION</a></li>
+            <li><a href="#hotels">ACCOMMODATIONS</a></li>
+            <li><a href="#town">AROUND TOWN</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </div>
       </div>
@@ -75,7 +78,173 @@
       <p><small>BY AUGUST</small></p>
     </div>
 
-    <footer class="container-fluid text-center">
+    <a id="setting"></a>
+    <div class="container-fluid text-center bg-aqua font">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Location</h2>
+        <p>
+          At The Lloyd Neck Bath Club <br>
+          September 23rd, 2017 <br>
+          5pm
+        </p>
+      </div>
+    </div>
+    </div>
+
+    <!-- Add Google Maps -->
+    <div id="googleMap" style="height:400px;width:100%;"></div>
+    <script>
+      function myMap() {
+      var myCenter = new google.maps.LatLng(40.9043562, -73.4834538);
+      var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      var marker = new google.maps.Marker({position:myCenter});
+      marker.setMap(map);
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKd4u4OKCHe0vjWJUD067yl5EhSxuGuLo&callback=myMap"></script>
+
+    <a id="hotels"></a>
+    <div class="container-fluid text-center bg-aqua font">
+      <h2>ACCOMMODATIONS</h2>
+      <h4>where to stay</h4>
+      <div class="row text-center">
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <a href="http://bestwesternnewyork.com/hotels/best-western-woodbury-inn">
+            <img src="images/best-western.jpg" alt="Best Western"></a>
+            <p><strong>Best Western</strong></p>
+            <p>Woodbury, NY<br>
+              Group Block Available</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <a href="http://www.theinnatfoxhollow.com/">
+            <img src="images/fox-hollow.jpg" alt="Fox Hollow Inn"></a>
+            <p><strong>The Inn at Fox Hollow</strong></p>
+            <p>Woodbury, NY<br>
+              Group Block Available</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <a  href="http://www.theharborrose.com/">
+            <img src="images/harbor-rose.jpg" alt="Harbor Rose"></a>
+            <p><strong>The Harbor Rose</strong></p>
+            <p>Huntington, NY</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <a href="http://www.eastnorwichinn.com/">
+            <img src="images/norwich.jpg" alt="East Norwich Inn"></a>
+            <p><strong>East Norwich Inn</strong></p>
+            <p>East Norwich, NY</p>
+          </div>
+        </div>
+    </div>
+
+    <a id="town"></a>
+    <div class="container-fluid text-center bg-white">
+      <h2>Around Town</h2>
+      <h4>If you have free time to explore, Huntington, Cold Spring Harbor,
+        Northport, and Oyster Bay are all great towns to take a walk around.
+        A few other nice spots include:</h4>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="https://parks.ny.gov/parks/23/details.aspx">
+          <span class="glyphicon glyphicon-leaf"></span></a>
+          <h4>Caumsett</h4>
+          <p>State Historic Park in Lloyd Neck</p>
+        </div>
+        <div class="col-sm-4">
+          <a href="http://www.heckscher.org/">
+          <span class="glyphicon glyphicon-tree-deciduous"></span></a>
+          <h4>The Heckscher</h4>
+          <p>Museum of Art in Huntington</p>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.nps.gov/sahi/index.htm">
+          <span class="glyphicon glyphicon-home"></span></a>
+          <h4>Sagamore Hill</h4>
+          <p>Teddy’s Roosevelt’s Estate, Sagamore Hill in Oyster Bay</p>
+        </div>
+        </div>
+        <br><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="http://raynhamhallmuseum.org/">
+          <span class="glyphicon glyphicon-tint"></span></a>
+          <h4>Raynham Hall</h4>
+          <p>In Oyster Bay</p>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.google.com/maps/place/Thai-USA/@40.8733132,-73.4278555,17z/data=!3m1!4b1!4m5!3m4!1s0x89e827d645be456d:0x941846c277f04ec!8m2!3d40.8733092!4d-73.4256668">
+          <span class="glyphicon glyphicon-fire"></span></a>
+          <h4>Thai USA</h4>
+          <p>Thai food in Huntington, NY</p>
+        </div>
+        <div class="col-sm-4">
+          <a href="https://www.google.com/maps/place/Little+Vincent's+Pizza/@40.8709791,-73.4286331,17z/data=!3m1!4b1!4m5!3m4!1s0x89e828788b3a1f53:0xf8e381888ac8ac9d!8m2!3d40.8709751!4d-73.4264444">
+          <span class="glyphicon glyphicon-certificate"></span></a>
+          <h4>Little Vincent's Pizza</h4>
+          <p>Pizza in Huntington, NY</p>
+        </div>
+      </div>
+      <br><br>
+      <div class="col-sm-4">
+        <a href="https://www.google.com/maps/place/Munday's/@40.871465,-73.4348197,15z/data=!4m5!3m4!1s0x89e828789cbbac87:0x4159271a4a39689d!8m2!3d40.871461!4d-73.426065">
+        <span class="glyphicon glyphicon-wrench"></span></a>
+        <h4>Munday's</h4>
+        <p>Diner in Huntington, NY</p>
+      </div>
+      <div class="col-sm-4">
+        <a href="http://www.bistrocassis.com/">
+        <span class="glyphicon glyphicon-grain"></span></a>
+        <h4>Cassis</h4>
+        <p>French bistro in Huntington, NY</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="http://www.pomodorolongisland.com/">
+          <span class="glyphicon glyphicon-glass"></span></a>
+          <h4>Pomodoro</h4>
+          <p>Italian restaurant in Huntington, NY</p>
+        </div>
+      </div>
+    </div>
+
+    <a id="contact"></a>
+    <div class="container-fluid bg-aqua font">
+      <h2 class="text-center">CONTACT US</h2>
+      <div class="row">
+        <div class="col-sm-5">
+          <p>If you have any questions let us know!</p>
+          <p><span class="glyphicon glyphicon-envelope"></span> millerbott@gmail.com</p>
+        </div>
+        <div class="col-sm-7">
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+            </div>
+          </div>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center font">
       <a href="#" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>
       </a>

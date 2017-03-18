@@ -1,7 +1,8 @@
 /* style for sept 23rd */
 
 body {
-  font: 400 15px Lato, sans-serif;
+  /*font: 400 15px 'Lora', serif;*/
+  font: 400 15px 'Vollkorn', serif;
   line-height: 1.8;
   color: #4a5859; /* Blue Grey */
 }
@@ -22,6 +23,11 @@ h4 {
   margin-bottom: 30px;
 }
 
+.font {
+    /*font-family: 'Lora', serif;*/
+    font-family: 'Vollkorn', serif;
+}
+
 .navbar {
   margin-bottom: 0;
   background-color: #eaf9f9; /* Aqua */
@@ -31,7 +37,8 @@ h4 {
   line-height: 1.42857143 !important;
   letter-spacing: 4px;
   border-radius: 0;
-  font-family: Montserrat, sans-serif;
+  /*font-family: 'Lora', serif;*/
+  font-family: 'Vollkorn', serif;
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -57,10 +64,11 @@ h4 {
 }
 
 .jumbotron {
-  background-color: #d8d8d8;  /* Light Grey */
+  background-color: #fff;  /* White */
   color: #4a5859; /* Blue Grey */
   padding: 100px 25px;
-  font-family: Montserrat, sans-serif;
+  /*font-family: 'Lora', serif;*/
+  font-family: 'Vollkorn', serif;
 }
 
 .container-fluid {
