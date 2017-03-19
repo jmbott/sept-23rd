@@ -82,12 +82,12 @@
         <!-- Modal content-->
         <div class="modal-content">
           <form method="POST" action="http://formspree.io/millerbott@gmail.com">
-          <fieldset>
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"><legend>RSVP</legend></h4>
+            <h4 class="modal-title">RSVP</h4>
           </div>
           <div class="modal-body">
+            <input type="hidden" name="type" value="RSVP">
             <input class="form-control" id="name" name="name" placeholder="Name" type="text" required><br>
             <input class="form-control" id="email" name="email" placeholder="Email" type="email" required><br>
             <input class="form-control" id="other" name="other" placeholder="Additional Guests" type="text"><br><br>
@@ -96,7 +96,6 @@
             <button class="btn btn-default" type="submit">Submit</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           </div>
-          </fieldset>
           </form>
         </div>
       </div>
@@ -244,8 +243,8 @@
     <a id="contact"></a>
     <div class="container-fluid bg-aqua font">
       <form method="POST" action="http://formspree.io/millerbott@gmail.com">
-      <fieldset>
-      <h2 class="text-center"><legend>CONTACT US</legend></h2>
+      <h2 class="text-center">CONTACT US</h2>
+      <input type="hidden" name="type" value="Contact">
       <div class="row">
         <div class="col-sm-5">
           <p>If you have any questions let us know!</p>
@@ -268,7 +267,6 @@
           </div>
         </div>
       </div>
-      </fieldset>
       </form>
     </div>
 
